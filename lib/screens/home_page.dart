@@ -2,6 +2,9 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:responsive_ui/custom_page/custom_color.dart';
+import 'package:responsive_ui/custom_page/custom_icon_button.dart';
+import 'package:responsive_ui/custom_page/custom_outline_button.dart';
+import 'package:responsive_ui/custom_page/custom_rounded_button.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -59,7 +62,72 @@ class _HomePageState extends State<HomePage> {
                       ),
                       ),
                     ),
-                  )
+                  ),
+
+                  CustomRoundedButton(
+                    title: 'Sign In',
+                    onPressed: () {
+                      
+                    },
+                    ),
+                    SizedBox(height: 20,),
+
+                    CustomOutlineButton(
+                      tittle: 'Sign Up',
+                      onPressed: () {
+                        
+                      },
+                      ),
+
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal:20,vertical: 10),
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: Divider(
+                                color: Colors.grey.withOpacity(0.4),
+                                thickness: 1,
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 8),
+                              child: Text('Or Connect using',
+                              style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w300,
+                        ),
+                              ),
+                            ),
+                            Expanded(
+                              child: Divider(
+                                color: Colors.grey.withOpacity(0.4),
+                                thickness: 1,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          CustomIconButton(
+                            colors: Colors.green,
+                             icon: Icons.facebook),
+
+                             CustomIconButton(
+                            colors: Colors.green,
+                             icon: Icons.email),
+
+                             CustomIconButton(
+                            colors: Colors.green,
+                             icon: Icons.person),
+
+                             CustomIconButton(
+                            colors: Colors.green,
+                             icon: Icons.tab),
+                        ],
+                      ),
                 ],
               ),
             )
